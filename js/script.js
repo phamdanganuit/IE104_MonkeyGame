@@ -214,10 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         <span>Lịch sử mua</span>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a href="#" onclick="handleLogout(event)" class="dropdown-item">
-                        <i class="fas fa-sign-out-alt"></i>
-                        <span>Đăng xuất</span>
-                    </a>
                 </div>
             `;
 
