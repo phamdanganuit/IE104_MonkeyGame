@@ -1,0 +1,342 @@
+/* Reset mặc định với font mới */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+}
+  
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.5s ease;
+}
+  
+.title {
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+  
+.lottie-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 0;
+    box-shadow: 
+      0 0 15px rgba(46, 204, 113, 0.2),
+      inset 0 0 15px rgba(46, 204, 113, 0.1);
+    border: 2px solid rgba(46, 204, 113, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+  
+.lottie-container::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(46, 204, 113, 0.1),
+      transparent
+    );
+    animation: shine 3s infinite;
+}
+  
+@keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+  
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+  
+.input-group {
+    position: relative;
+}
+  
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+  
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+  
+.input-group input:focus {
+    border-color: #2ecc71;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+  
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 65%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+  
+.toggle-password i {
+    font-size: 1.2rem;
+    color: #666;
+}
+  
+.toggle-password:hover {
+    opacity: 1;
+}
+  
+.toggle-password:hover i {
+    color: #2ecc71;
+}
+  
+.btn-login {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+  
+.btn-login:active {
+    transform: translateY(0);
+}
+  
+/* Animation cho input khi focus */
+@keyframes inputFocus {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+  
+.input-group input:focus {
+    animation: inputFocus 0.3s ease;
+}
+  
+/* Thêm vào cuối file login.css */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+  
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+  
+.notification.success {
+    background: #4CAF50;
+}
+  
+.notification.error {
+    background: #f44336;
+}
+  
+/* Hiệu ứng ripple cho button */
+.btn-login {
+    position: relative;
+    overflow: hidden;
+}
+  
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+  
+@keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+}
+  
+/* Thêm style cho SVG bên trong container */
+.lottie-container svg {
+    width: 150% !important;
+    height: 150% !important;
+    object-fit: contain;
+    transform: scale(1.5);
+    position: absolute;
+    left: -25%;
+    top: -25%;
+}
+  
+.switch-form {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.switch-form a {
+    color: #2ecc71;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+  
+.switch-form a:hover {
+    color: #27ae60;
+    text-decoration: underline;
+}
+  
+/* Animation cho chuyển trang */
+.login-container {
+    animation: fadeIn 0.5s ease;
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+::placeholder {
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+  
+/* User Menu Styles */
+.nav__user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav__user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav__user-info i {
+  font-size: 1.2rem;
+  color: #4CAF50;
+}
+
+.nav__user-info span {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.nav__user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  padding: 8px 0;
+  min-width: 180px;
+  display: none;
+  z-index: 1000;
+}
+
+.nav__user-menu:hover .nav__user-dropdown {
+  display: block;
+}
+
+.nav__user-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.nav__user-dropdown a:hover {
+  background: #f5f5f5;
+}
+
+.nav__user-dropdown i {
+  font-size: 1rem;
+  color: #666;
+}
+  

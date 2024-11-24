@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="login.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../favicons/monkey-logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="lottie-container">
+        <div id="lottie-animation"></div>
+      </div>
+      <h2 class="title">Đăng ký</h2>
+      <form id="register-form" class="login-form">
+        <div class="input-group">
+          <label for="register-username">Tên tài khoản</label>
+          <input
+            type="text"
+            id="register-username"
+            placeholder="Nhập tên tài khoản"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="register-email">Email</label>
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Nhập email"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="register-password">Mật khẩu</label>
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Nhập mật khẩu"
+            required
+          />
+          <div class="toggle-password">
+            <i class="fa-regular fa-eye-slash"></i>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="register-confirm-password">Xác nhận mật khẩu</label>
+          <input
+            type="password"
+            id="register-confirm-password"
+            placeholder="Nhập lại mật khẩu"
+            required
+          />
+          <div class="toggle-password">
+            <i class="fa-regular fa-eye-slash"></i>
+          </div>
+        </div>
+        <button type="submit" class="btn-login">Đăng ký</button>
+      </form>
+      <div class="switch-form">
+        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+      </div>
+    </div>
+
+    <script src="register.js"></script>
+    <script>
+      // Khởi tạo animation
+      const animation = lottie.loadAnimation({
+        container: document.getElementById("lottie-animation"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "animation.json",
+      });
+    </script>
+  </body>
+</html>

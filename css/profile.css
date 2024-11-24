@@ -1,0 +1,377 @@
+/* Profile Container */
+.profile-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Sidebar Styles */
+.profile-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    order: -1;
+}
+
+.profile-sidebar h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-menu {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.profile-menu li {
+    margin-bottom: 5px;
+}
+
+.profile-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: #999;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.profile-menu a:hover {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.profile-menu li.active a {
+    background: #4CAF50;
+    color: white;
+}
+
+.profile-menu i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Content Styles */
+.profile-content {
+    flex: 1;
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-header h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.profile-header p {
+    color: #999;
+}
+
+.profile-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.profile-section h2 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.edit-btn {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    background: none;
+    border: none;
+    color: #4CAF50;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Referral Link */
+.referral-link {
+    display: flex;
+    gap: 10px;
+}
+
+.referral-link input {
+    flex: 1;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.copy-btn {
+    padding: 0 15px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Verification Section */
+.verify-note {
+    color: #ff4444;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Logout Button */
+.profile-logout {
+    margin-top: auto;
+    max-width: fit-content;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 59, 48, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #ff3b30;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 59, 48, 0.2);
+}
+
+/* Style cho form đổi mật khẩu */
+#password-form {
+    margin-top: 20px;
+}
+
+.change-password-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.change-password-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.toggle-password {
+    color: #4CAF50;
+}
+
+.toggle-password:hover {
+    color: #45a049;
+}
+
+/* Balance Page Styles */
+.balance-amount {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.add-balance-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.add-balance-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.transaction-list {
+    margin-top: 20px;
+}
+
+/* History Page Styles */
+.purchase-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.filter-select {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+}
+
+.purchase-list {
+    margin-top: 20px;
+}
+
+/* Empty State Styles */
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+}
+
+/* Style cho nút quay lại */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.back-btn i {
+    font-size: 1.2rem;
+}
+
+/* Đảm bảo content hiển thị trước sidebar trên mobile */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+        position: static;
+        order: 2;
+    }
+
+    .profile-content {
+        order: 1;
+    }
+}
+
+/* Thêm margin-top cho main để tránh bị đè bởi header */
+.main {
+    margin-top: 0;
+    min-height: 100vh;
+    background: var(--background-color);
+}
+
+/* Đảm bảo header luôn ở trên cùng */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+} 

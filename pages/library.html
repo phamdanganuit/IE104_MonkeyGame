@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư viện - MonkeyGameShop</title>
+    <link
+      rel="shortcut icon"
+      href="../favicons/monkey-logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="../index.html">
+            <img
+              class="nav__logo-img"
+              src="../favicons/monkey-logo.svg"
+              alt="MonkeyGameShop"
+            />
+          </a>
+        </div>
+        <div class="nav__menu">
+          <div class="nav__list">
+            <a href="home.html" class="nav__link">
+              <i class="nav__icon fas fa-home"></i>
+              <span class="nav__text">Trang chủ</span>
+            </a>
+            <a href="store.html" class="nav__link">
+              <i class="nav__icon fas fa-store"></i>
+              <span class="nav__text">Cửa hàng</span>
+            </a>
+            <a href="library.html" class="nav__link nav__link--active">
+              <i class="nav__icon fas fa-book"></i>
+              <span class="nav__text">Thư viện</span>
+            </a>
+            <a href="community.html" class="nav__link">
+              <i class="nav__icon fas fa-users"></i>
+              <span class="nav__text">Cộng đồng</span>
+            </a>
+            <a href="support.html" class="nav__link">
+              <i class="nav__icon fas fa-headset"></i>
+              <span class="nav__text">Hỗ trợ</span>
+            </a>
+          </div>
+          <div class="nav__actions">
+            <a href="#" class="nav__language-btn">
+              <i class="fas fa-globe"></i>
+              <span>Tiếng Việt</span>
+            </a>
+            <a href="../login/login.html" class="nav__login-btn">
+              <i class="fas fa-sign-in-alt"></i>
+              <span>Đăng nhập</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="library-container">
+        <div class="library-header">
+          <h1>Thư viện game của bạn</h1>
+          <div class="library-filters">
+            <input
+              type="text"
+              placeholder="Tìm kiếm game..."
+              class="search-input"
+            />
+            <select class="filter-select">
+              <option value="all">Tất cả</option>
+              <option value="installed">Đã cài đặt</option>
+              <option value="not-installed">Chưa cài đặt</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="library-grid">
+          <!-- Game 1 -->
+          <div class="game-card">
+            <img src="../images/Demo/callofduty.png" alt="Cyberpunk 2077" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Cyberpunk 2077</h3>
+              <div class="game-meta">
+                <div class="game-status installed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Đã cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="play-btn">
+                    <i class="fas fa-play"></i>
+                    Chơi ngay
+                  </button>
+                  <button class="uninstall-btn">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 2 -->
+          <div class="game-card">
+            <img src="../images/Demo/assasin2.jpg" alt="God of War" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>God of War Ragnarök</h3>
+              <div class="game-meta">
+                <div class="game-status not-installed">
+                  <i class="fas fa-download"></i>
+                  <span>Chưa cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="install-btn">
+                    <i class="fas fa-download"></i>
+                    Cài đặt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 3 -->
+          <div class="game-card">
+            <img src="../images/Demo/catlab.jpg" alt="Spider-Man 2" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Marvel's Spider-Man 2</h3>
+              <div class="game-meta">
+                <div class="game-status installed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Đã cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="play-btn">
+                    <i class="fas fa-play"></i>
+                    Chơi ngay
+                  </button>
+                  <button class="uninstall-btn">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 4 -->
+          <div class="game-card">
+            <img
+              src="../images/Demo/desnity2.jpg"
+              alt="Resident Evil 4 Remake"
+            />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Resident Evil 4 Remake</h3>
+              <div class="game-meta">
+                <div class="game-status installed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Đã cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="play-btn">
+                    <i class="fas fa-play"></i>
+                    Chơi ngay
+                  </button>
+                  <button class="uninstall-btn">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 5 -->
+          <div class="game-card">
+            <img src="../images/Demo/dablo4.png" alt="Final Fantasy XVI" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Final Fantasy XVI</h3>
+              <div class="game-meta">
+                <div class="game-status not-installed">
+                  <i class="fas fa-download"></i>
+                  <span>Chưa cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="install-btn">
+                    <i class="fas fa-download"></i>
+                    Cài đặt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 6 -->
+          <div class="game-card">
+            <img src="../images/Demo/theshow.jpg" alt="Lies of P" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Lies of P</h3>
+              <div class="game-meta">
+                <div class="game-status installed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Đã cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="play-btn">
+                    <i class="fas fa-play"></i>
+                    Chơi ngay
+                  </button>
+                  <button class="uninstall-btn">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 7 -->
+          <div class="game-card">
+            <img src="../images/Demo/theasent.jpg" alt="Mortal Kombat 1" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Mortal Kombat 1</h3>
+              <div class="game-meta">
+                <div class="game-status not-installed">
+                  <i class="fas fa-download"></i>
+                  <span>Chưa cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="install-btn">
+                    <i class="fas fa-download"></i>
+                    Cài đặt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 8 -->
+          <div class="game-card">
+            <img src="../images/Demo/synce.png" alt="Assassin's Creed Mirage" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Assassin's Creed Mirage</h3>
+              <div class="game-meta">
+                <div class="game-status installed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Đã cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="play-btn">
+                    <i class="fas fa-play"></i>
+                    Chơi ngay
+                  </button>
+                  <button class="uninstall-btn">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 9 -->
+          <div class="game-card">
+            <img src="../images/Demo/overwatch2.jpg" alt="Tekken 8" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Tekken 8</h3>
+              <div class="game-meta">
+                <div class="game-status installed">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Đã cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="play-btn">
+                    <i class="fas fa-play"></i>
+                    Chơi ngay
+                  </button>
+                  <button class="uninstall-btn">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 10 -->
+          <div class="game-card">
+            <img
+              src="../images/Demo/nba2024.jpg"
+              alt="Like a Dragon: Infinite Wealth"
+            />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>Like a Dragon: Infinite Wealth</h3>
+              <div class="game-meta">
+                <div class="game-status not-installed">
+                  <i class="fas fa-download"></i>
+                  <span>Chưa cài đặt</span>
+                </div>
+                <div class="game-actions">
+                  <button class="install-btn">
+                    <i class="fas fa-download"></i>
+                    Cài đặt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

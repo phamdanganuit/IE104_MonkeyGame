@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Số dư tài khoản - MonkeyGameShop</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      rel="shortcut icon"
+      href="../favicons/monkey-logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="profile-container">
+        <a href="home.html" class="back-btn">
+          <i class="fas fa-times"></i>
+        </a>
+
+        <div class="profile-content">
+          <div class="profile-header">
+            <div class="profile-info">
+              <h1>Số dư tài khoản</h1>
+              <p id="profile-email">Email: <span></span></p>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <h2>Số dư hiện tại</h2>
+            <div class="balance-amount">0đ</div>
+            <button class="add-balance-btn">
+              <i class="fas fa-plus"></i>
+              Nạp tiền
+            </button>
+          </div>
+
+          <div class="profile-section">
+            <h2>Lịch sử giao dịch</h2>
+            <div class="transaction-list">
+              <div class="empty-state">
+                <i class="fas fa-history"></i>
+                <p>Chưa có giao dịch nào</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-sidebar">
+          <h2>Người dùng</h2>
+          <ul class="profile-menu">
+            <li>
+              <a href="profile.html"
+                ><i class="fas fa-user"></i>Tài khoản của tôi</a
+              >
+            </li>
+            <li class="active">
+              <a href="balance.html"
+                ><i class="fas fa-wallet"></i>Số dư tài khoản</a
+              >
+            </li>
+            <li>
+              <a href="history.html"
+                ><i class="fas fa-gamepad"></i>Lịch sử mua</a
+              >
+            </li>
+          </ul>
+
+          <div class="profile-logout">
+            <a href="#" onclick="handleLogout(event)" class="logout-btn">
+              <i class="fas fa-sign-out-alt"></i>
+              Đăng xuất
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

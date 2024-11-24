@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+    <link
+      rel="shortcut icon"
+      href="../favicons/monkey-logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2 class="title">Đăng nhập</h2>
+      <div class="lottie-container">
+        <div id="lottie-animation"></div>
+      </div>
+      <form id="login-form" class="login-form">
+        <div class="input-group">
+          <label for="login-email">Email</label>
+          <input
+            type="email"
+            id="login-email"
+            placeholder="Nhập email"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="login-password">Mật khẩu</label>
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Nhập mật khẩu"
+            required
+          />
+          <div class="toggle-password">
+            <i class="fa-regular fa-eye-slash"></i>
+          </div>
+        </div>
+        <button type="submit" class="btn-login">Đăng nhập</button>
+      </form>
+      <div class="switch-form">
+        <p>Chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cửa hàng - MonkeyGameShop</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link
+      rel="shortcut icon"
+      href="../favicons/monkey-logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="../index.html">
+            <img
+              class="nav__logo-img"
+              src="../favicons/monkey-logo.svg"
+              alt="MonkeyGameShop"
+            />
+          </a>
+        </div>
+        <div class="nav__menu">
+          <div class="nav__list">
+            <a href="home.html" class="nav__link">
+              <i class="nav__icon fas fa-home"></i>
+              <span class="nav__text">Trang chủ</span>
+            </a>
+            <a href="store.html" class="nav__link nav__link--active">
+              <i class="nav__icon fas fa-store"></i>
+              <span class="nav__text">Cửa hàng</span>
+            </a>
+            <a href="library.html" class="nav__link">
+              <i class="nav__icon fas fa-book"></i>
+              <span class="nav__text">Thư viện</span>
+            </a>
+            <a href="community.html" class="nav__link">
+              <i class="nav__icon fas fa-users"></i>
+              <span class="nav__text">Cộng đồng</span>
+            </a>
+            <a href="support.html" class="nav__link">
+              <i class="nav__icon fas fa-headset"></i>
+              <span class="nav__text">Hỗ trợ</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav__actions">
+          <a href="#" class="nav__language-btn">
+            <i class="fas fa-globe"></i>
+            <span>Tiếng Việt</span>
+          </a>
+          <a href="../login/login.html" class="nav__login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Đăng nhập</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Thanh tìm kiếm -->
+      <div class="store-search">
+        <div class="search-container">
+          <div class="search-box">
+            <div class="search-input-wrapper">
+              <input type="text" placeholder="Tìm kiếm game..." />
+            </div>
+            <div class="search-filters">
+              <select>
+                <option value="" disabled selected>Thể loại</option>
+                <option value="action">Hành động</option>
+                <option value="adventure">Phiêu lưu</option>
+                <option value="rpg">Nhập vai</option>
+                <option value="sports">Thể thao</option>
+                <option value="strategy">Chiến thuật</option>
+              </select>
+              <select>
+                <option value="" disabled selected>Giá</option>
+                <option value="free">Miễn phí</option>
+                <option value="under-100">Dưới 100.000đ</option>
+                <option value="100-500">100.000đ - 500.000đ</option>
+                <option value="over-500">Trên 500.000đ</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner Slider -->
+      <div class="store-banner">
+        <div class="banner-slides">
+          <div class="banner-slide active">
+            <img
+              src="../images/banner/godofwars.jpg"
+              alt="God of War Ragnarök"
+            />
+            <div class="slide-content">
+              <h2>God Of War Ragnarök</h2>
+              <p>
+                Kratos and Atreus embark on a mythic journey for answers before
+                Ragnarök arrives.
+              </p>
+              <div class="price-info">
+                <span class="discount">-30%</span>
+                <span class="original-price">₫1,290,000</span>
+                <span class="price">₫899,000</span>
+              </div>
+              <button class="buy-now">Mua ngay</button>
+            </div>
+          </div>
+
+          <div class="banner-slide">
+            <img
+              src="../images/banner/cyberpunk2077.png"
+              alt="Cyberpunk 2077"
+            />
+            <div class="slide-content">
+              <h2>Cyberpunk 2077</h2>
+              <p>
+                Experience the dark future of Night City in this open-world
+                action-adventure.
+              </p>
+              <div class="price-info">
+                <span class="discount">-40%</span>
+                <span class="original-price">₫990,000</span>
+                <span class="price">₫599,000</span>
+              </div>
+              <button class="buy-now">Mua ngay</button>
+            </div>
+          </div>
+
+          <div class="banner-slide">
+            <img src="../images/banner/spiderman2.png" alt="Spider-Man 2" />
+            <div class="slide-content">
+              <h2>Marvel's Spider-Man 2</h2>
+              <p>
+                Swing through New York City as both Peter Parker and Miles
+                Morales.
+              </p>
+              <div class="price-info">
+                <span class="price">₫1,390,000</span>
+              </div>
+              <button class="buy-now">Mua ngay</button>
+            </div>
+          </div>
+
+          <div class="banner-slide">
+            <img src="../images/banner/tekken8.jpeg" alt="Tekken 8" />
+            <div class="slide-content">
+              <h2>Tekken 8</h2>
+              <p>
+                The next evolution of the fighting genre, powered by Unreal
+                Engine 5.
+              </p>
+              <div class="price-info">
+                <span class="price">₫1,190,000</span>
+              </div>
+              <button class="buy-now">Mua ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="banner-nav prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="banner-nav next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Dots navigation -->
+        <div class="banner-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <!-- Section Game mới cập nhật -->
+      <section class="game-section">
+        <div class="section-header">
+          <h2>Mới cập nhật</h2>
+          <a href="#" class="view-all">Xem tất cả</a>
+        </div>
+        <button class="section-nav prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="section-nav next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="game-grid">
+          <div class="game-card">
+            <img src="../images/Demo/agrou.png" alt="Agrou" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Agrou</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">1,190,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img
+              src="../images/Demo/ark.png"
+              alt="Like a Dragon: Infinite Wealth"
+            />
+            <div class="game-info">
+              <span class="edition">ULTIMATE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">ARK Limited</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-20%</span>
+                  <span class="original-price">1,290,000đ</span>
+                  <span class="price">1,032,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/assasin2.jpg" alt="Palworld" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Assasin 2</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">390,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/battlefield.jpg" alt="Battle Fields" />
+            <div class="game-info">
+              <span class="edition">SUPER EARTH EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Battle Fields</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">990,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/callofduty.png" alt="Call of Duty 3" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Call of Duty 3</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-50%</span>
+                  <span class="original-price">1,590,000đ</span>
+                  <span class="price">795,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/catlab.jpg" alt="Cat Lab" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Cat Lab</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-30%</span>
+                  <span class="original-price">1,690,000đ</span>
+                  <span class="price">1,183,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/dablo4.png" alt="Dablo IV" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Dablo IV</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">950,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/mortalcombat.jpg" alt="Mortal Kombat 1" />
+            <div class="game-info">
+              <span class="edition">PREMIUM EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >Mortal Kombat 1</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-35%</span>
+                  <span class="original-price">1,490,000đ</span>
+                  <span class="price">968,500đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img
+              src="../images/Demo/desnity2.jpg"
+              alt="Assassin's Creed Mirage"
+            />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >Assassin's Creed Mirage</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">1,290,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/gta5.jpg" alt="Sea of Thieves" />
+            <div class="game-info">
+              <span class="edition">2024 EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Sea of Thieves</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-40%</span>
+                  <span class="original-price">880,000đ</span>
+                  <span class="price">528,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Game nổi bật -->
+      <section class="game-section">
+        <div class="section-header">
+          <h2>Nổi bật</h2>
+          <a href="#" class="view-all">Xem tất cả</a>
+        </div>
+        <button class="section-nav prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="section-nav next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="game-grid">
+          <!-- Giữ 10 game đã có và thêm game mới -->
+
+          <div class="game-card">
+            <img src="../images/Demo/haloween.png" alt="Street Fighter 6" />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >Street Fighter 6</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-25%</span>
+                  <span class="original-price">1,290,000đ</span>
+                  <span class="price">967,500đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img
+              src="../images/Demo/lordofthefallen.jpg"
+              alt="Dead Space Remake"
+            />
+            <div class="game-info">
+              <span class="edition">DELUXE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >Dead Space Remake</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-40%</span>
+                  <span class="original-price">1,190,000đ</span>
+                  <span class="price">714,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/minecraft.png" alt="EA SPORTS FC 24" />
+            <div class="game-info">
+              <span class="edition">ULTIMATE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >EA SPORTS FC 24</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-30%</span>
+                  <span class="original-price">1,590,000đ</span>
+                  <span class="price">1,113,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/moon.jpg" alt="Red Dead Redemption 2" />
+            <div class="game-info">
+              <span class="edition">ULTIMATE EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >Red Dead Redemption 2</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-50%</span>
+                  <span class="original-price">1,090,000đ</span>
+                  <span class="price">545,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/thewitcher.png" alt="The Witcher 3" />
+            <div class="game-info">
+              <span class="edition">GOTY EDITION</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >The Witcher 3: Wild Hunt</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="discount">-70%</span>
+                  <span class="original-price">850,000đ</span>
+                  <span class="price">255,000đ</span>
+                </div>
+                <button class="buy-now">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Game miễn phí -->
+      <section class="game-section">
+        <div class="section-header">
+          <h2>Chơi miễn phí</h2>
+          <a href="#" class="view-all">Xem tất cả</a>
+        </div>
+        <button class="section-nav prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="section-nav next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="game-grid">
+          <div class="game-card">
+            <img src="../images/Demo/nba2024.jpg" alt="Fortnite" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Fortnite</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/overwatch2.jpg" alt="Valorant" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Valorant</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/party_animal.jpg" alt="Counter-Strike 2" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title"
+                  >Counter-Strike 2</a
+                >
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/roblox.jpg" alt="Dota 2" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3><a href="game-detail.html" class="game-title">Dota 2</a></h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/steeling.jpg" alt="Warframe" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Warframe</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/synce.png" alt="Apex Legends" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Apex Legends</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/theasent.jpg" alt="Genshin Impact" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Genshin Impact</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/thecity.png" alt="Path of Exile" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Path of Exile</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/theshow.jpg" alt="Destiny 2" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Destiny 2</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <img src="../images/Demo/thewitcher.png" alt="Lost Ark" />
+            <div class="game-info">
+              <span class="edition">BASE GAME</span>
+              <h3>
+                <a href="game-detail.html" class="game-title">Lost Ark</a>
+              </h3>
+              <div class="game-meta">
+                <div class="price-info">
+                  <span class="price">Miễn phí</span>
+                </div>
+                <button class="buy-now">Chơi ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="#" class="footer__link">Điều khoản dịch vụ</a>
+        <a href="#" class="footer__link">Chính sách bảo mật</a>
+        <a href="#" class="footer__link">Liên hệ</a>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

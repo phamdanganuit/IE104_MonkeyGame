@@ -1,0 +1,283 @@
+:root {
+  --text-color: #ffffff;
+  --section-bg: rgb(241, 241, 241);
+  --ative-color: #7b68ee;
+  --main-color: #2a2a2a;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/K2D/K2D-Regular.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding-top: 85px;
+  font-family: "Roboto";
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+header {
+  padding: 1rem 2rem;
+  background-color: var(--search-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 2rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.language-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-btn img {
+  width: 20px;
+  height: 14px;
+}
+
+.download-btn {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  background-image: url("../images/banner/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--section-bg);
+  position: relative;
+  min-height: 300px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 17, 23, 0.8) 0%,
+    rgba(13, 17, 23, 0.9) 100%
+  );
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cta-buttons button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  min-width: 200px;
+}
+
+.cta-buttons .download {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .download:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .web-version {
+  background-color: var(--ative-color);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .web-version:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cta-buttons button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.features .feature-card {
+  color: #000;
+}
+
+.features h2 {
+  color: #000;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.feature-card img {
+  max-width: 50%;
+  border-radius: 8px;
+}
+
+/* Games Section */
+.games {
+  padding: 4rem 2rem;
+  background-color: var(--section-bg);
+  color: #000;
+}
+
+.games h2 {
+  color: #000;
+}
+
+.games p {
+  color: #000;
+}
+
+.games .contact-link {
+  color: var(--accent-color);
+}
+
+.games .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.games-content {
+  flex: 1;
+  text-align: left;
+}
+
+.games-image {
+  flex: 1;
+  text-align: right;
+}
+
+.games-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.9);
+}
+
+.footer-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.logo {
+  height: 65px;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+section {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .games .container {
+    flex-direction: column-reverse;
+  }
+
+  .games-image {
+    text-align: center;
+  }
+}
