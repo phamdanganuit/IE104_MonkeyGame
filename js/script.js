@@ -214,6 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <span>Lịch sử mua</span>
                     </a>
                     <div class="dropdown-divider"></div>
+                    
                 </div>
             `;
 
