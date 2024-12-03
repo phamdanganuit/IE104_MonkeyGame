@@ -2926,3 +2926,6 @@ body {
 .profile-content {
   flex: 1;
 }
+option {
+  color: #000000;
+}
